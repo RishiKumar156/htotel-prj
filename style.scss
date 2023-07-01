@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+    }
+  }
+  h1 {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+// sidebar
+.sidebar {
+  z-index: 10;
+  ul {
+    list-style: none;
+    a {
+      color: black;
+      font-size: 1rem;
+    }
+  }
+  width: 6rem;
+  height: 100%;
+  position: fixed;
+  background-color: #1f1812;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-icon {
+  padding-top: 3rem;
+  .line {
+    cursor: pointer;
+  }
+  .line2 {
+    height: 0.2rem;
+    width: 2rem;
+    background-color: #e8e5e5 !important;
+    margin-bottom: 0.3rem;
+  }
+  .line1,
+  .line3 {
+    height: 0.2rem;
+    width: 1.2rem;
+    background-color: #e8e5e5 !important;
+    margin-bottom: 0.3rem;
+  }
+}
+.menu-icon:hover {
+  .line1,
+  .line3 {
+    width: 2rem;
+    transition: 0.3s ease-in;
+  }
+}
+
+// social media icons adjustment
+.media-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 13rem;
+  i {
+    font-size: 1.2rem;
+    color: white;
+  }
+  i:hover {
+    color: #cdcdcd;
+    transition: 0.8s ease;
+  }
+}
+
+.year {
+  p {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 3rem;
+  }
+}
+// sidebar end
+// navbar
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  left: -14rem;
+  position: fixed;
+  input {
+    width: 75%;
+    margin: 2rem 1rem;
+    background: none;
+    border: none;
+    color: white;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.733);
+    outline: none;
+    letter-spacing: 0.1rem;
+  }
+  // notes for the lecture input:focus { background-color: white  } , I don't used to change the input bg color
+  input::placeholder {
+    color: #b1b1b1;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+  }
+  a {
+    text-transform: uppercase;
+    color: #4b4b4b;
+  }
+  width: 20rem;
+  height: 100%;
+  background: linear-gradient(
+      90deg,
+      rgba(118, 115, 113, 0.804),
+      rgba(110, 75, 41, 0.792)
+    ),
+    url("./nav-bk.webp") center no-repeat;
+  background-size: cover;
+  p {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .navigation-heading {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #cdcdcd;
+    text-align: center;
+    padding-top: 3rem;
+    font-weight: 400;
+  }
+  .navigation-search-btn {
+    border: none;
+    background: none;
+    color: #b1b1b1;
+    position: absolute;
+    top: 1.9rem;
+    right: 3.5rem;
+    cursor: pointer;
+  }
+
+  .navigation-search {
+    /* the position relative is give beacuse this is the parent (form ) 
+    holding the input and search icon to move 
+    icon we have to mak ethe parent position relative and we can 
+    use the position fixed to the icon to change the position inside the parent element */
+    position: relative;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  li {
+    margin-bottom: 2rem;
+    transition: 1s ease-in;
+  }
+  a:hover {
+    color: white;
+    font-size: 1rem;
+  }
+  .navigation-link {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: #cdcdcd;
+    text-transform: uppercase;
+  }
+  .navigation-item {
+    position: relative;
+  }
+  .navigation-link::before {
+    content: "";
+    width: 0rem;
+    height: 0.1rem;
+    background-color: #cdcdcd;
+    position: absolute;
+    top: 1rem;
+    left: -4rem;
+    transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+  }
+  .navigation-link::after {
+    content: "";
+    width: 0rem;
+    height: 0.1rem;
+    background-color: #cdcdcd;
+    position: absolute;
+    top: 1rem;
+    right: -4rem;
+    transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+  }
+  .navigation-link:hover::before,
+  .navigation-link:hover::after {
+    width: 3rem;
+  }
+
+  .copy-right {
+    p {
+      font-size: 0.7rem;
+      font-weight: 200;
+      color: #cdcdcd;
+    }
+  }
+}
+
+.navigation.active {
+  left: 6rem;
+  transition: 0.8s cubic-bezier(1, 0, 0, 1);
+}
+// end of navbar
+
+// header section
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 6rem;
+  img {
+    margin-left: 1rem;
+    height: 2rem;
+  }
+  height: 100vh;
+  background: linear-gradient(
+      275deg,
+      rgba(45, 27, 18, 0.708),
+      rgba(102, 97, 88, 0.457)
+    ),
+    url(./lob.jpeg) center/cover;
+
+  .brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: white;
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
+      margin-left: 1rem;
+      margin-top: 0.3rem;
+    }
+  }
+
+  .banner {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: #cdcdcd;
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+      margin-bottom: 2rem;
+      animation: anima 5s ease-in;
+      animation-iteration-count: infinite;
+    }
+    p {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: #cdcdcd;
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      border-radius: 10rem;
+      background: none;
+      border: none;
+
+      a {
+        font-size: 1.2rem;
+        text-decoration: none;
+        background: none;
+        color: #e8e5e5;
+        padding: 0.8rem 1rem;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+  }
+  // button:active {
+  //   transform: translateY(0.2rem);
+  // }
+  /*  The translatey used to move the tragated item in to y axis so that in onclick it will create a simple jumping effect. */
+  @keyframes anima {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
+  }
+}

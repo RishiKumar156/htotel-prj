@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+* li {
+  list-style: none;
+}
+* li a {
+  text-decoration: none;
+}
+* h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sidebar {
+  z-index: 10;
+  width: 6rem;
+  height: 100%;
+  position: fixed;
+  background-color: #1f1812;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul a {
+  color: black;
+  font-size: 1rem;
+}
+
+.menu-icon {
+  padding-top: 3rem;
+}
+.menu-icon .line {
+  cursor: pointer;
+}
+.menu-icon .line2 {
+  height: 0.2rem;
+  width: 2rem;
+  background-color: #e8e5e5 !important;
+  margin-bottom: 0.3rem;
+}
+.menu-icon .line1,
+.menu-icon .line3 {
+  height: 0.2rem;
+  width: 1.2rem;
+  background-color: #e8e5e5 !important;
+  margin-bottom: 0.3rem;
+}
+
+.menu-icon:hover .line1,
+.menu-icon:hover .line3 {
+  width: 2rem;
+  transition: 0.3s ease-in;
+}
+
+.media-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 13rem;
+}
+.media-icons i {
+  font-size: 1.2rem;
+  color: white;
+}
+.media-icons i:hover {
+  color: #cdcdcd;
+  transition: 0.8s ease;
+}
+
+.year p {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  left: -14rem;
+  position: fixed;
+  width: 20rem;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(118, 115, 113, 0.804), rgba(110, 75, 41, 0.792)), url("./nav-bk.webp") center no-repeat;
+  background-size: cover;
+}
+.navigation input {
+  width: 75%;
+  margin: 2rem 1rem;
+  background: none;
+  border: none;
+  color: white;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.733);
+  outline: none;
+  letter-spacing: 0.1rem;
+}
+.navigation input::-moz-placeholder {
+  color: #b1b1b1;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+}
+.navigation input::placeholder {
+  color: #b1b1b1;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+}
+.navigation a {
+  text-transform: uppercase;
+  color: #4b4b4b;
+}
+.navigation p {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.navigation .navigation-heading {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #cdcdcd;
+  text-align: center;
+  padding-top: 3rem;
+  font-weight: 400;
+}
+.navigation .navigation-search-btn {
+  border: none;
+  background: none;
+  color: #b1b1b1;
+  position: absolute;
+  top: 1.9rem;
+  right: 3.5rem;
+  cursor: pointer;
+}
+.navigation .navigation-search {
+  /* the position relative is give beacuse this is the parent (form ) 
+  holding the input and search icon to move 
+  icon we have to mak ethe parent position relative and we can 
+  use the position fixed to the icon to change the position inside the parent element */
+  position: relative;
+}
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.navigation li {
+  margin-bottom: 2rem;
+  transition: 1s ease-in;
+}
+.navigation a:hover {
+  color: white;
+  font-size: 1rem;
+}
+.navigation .navigation-link {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: #cdcdcd;
+  text-transform: uppercase;
+}
+.navigation .navigation-item {
+  position: relative;
+}
+.navigation .navigation-link::before {
+  content: "";
+  width: 0rem;
+  height: 0.1rem;
+  background-color: #cdcdcd;
+  position: absolute;
+  top: 1rem;
+  left: -4rem;
+  transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+.navigation .navigation-link::after {
+  content: "";
+  width: 0rem;
+  height: 0.1rem;
+  background-color: #cdcdcd;
+  position: absolute;
+  top: 1rem;
+  right: -4rem;
+  transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+.navigation .navigation-link:hover::before,
+.navigation .navigation-link:hover::after {
+  width: 3rem;
+}
+.navigation .copy-right p {
+  font-size: 0.7rem;
+  font-weight: 200;
+  color: #cdcdcd;
+}
+
+.navigation.active {
+  left: 6rem;
+  transition: 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 6rem;
+  height: 100vh;
+  background: linear-gradient(275deg, rgba(45, 27, 18, 0.708), rgba(102, 97, 88, 0.457)), url(./lob.jpeg) center/cover;
+  /*  The translatey used to move the tragated item in to y axis so that in onclick it will create a simple jumping effect. */
+}
+#header img {
+  margin-left: 1rem;
+  height: 2rem;
+}
+#header .brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#header .brand h1 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+}
+#header .banner {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header .banner h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #cdcdcd;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+  animation: anima 5s ease-in;
+  animation-iteration-count: infinite;
+}
+#header .banner p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #cdcdcd;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+}
+#header .banner button {
+  border-radius: 10rem;
+  background: none;
+  border: none;
+}
+#header .banner button a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  background: none;
+  color: #e8e5e5;
+  padding: 0.8rem 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+@keyframes anima {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}/*# sourceMappingURL=style.css.map */
