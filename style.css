@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 * li {
   list-style: none;
@@ -214,7 +214,7 @@
   flex-direction: column;
   margin-left: 6rem;
   height: 100vh;
-  background: linear-gradient(275deg, rgba(45, 27, 18, 0.708), rgba(102, 97, 88, 0.457)), url(./lob.jpeg) center/cover;
+  background: linear-gradient(275deg, rgba(45, 27, 18, 0.708), rgba(102, 97, 88, 0.457)), url(./resort.jpeg) center/cover;
   /*  The translatey used to move the tragated item in to y axis so that in onclick it will create a simple jumping effect. */
 }
 #header img {
@@ -228,9 +228,9 @@
   align-items: center;
 }
 #header .brand h1 {
-  font-size: 1.2rem;
+  font-size: 3.2rem;
   text-transform: uppercase;
-  color: white;
+  color: rgb(222, 222, 222);
   text-align: center;
   font-weight: 400;
   letter-spacing: 0.2rem;
@@ -284,4 +284,154 @@
   100% {
     opacity: 100;
   }
+}
+
+#aboutus {
+  margin-left: 6rem;
+  height: 80vh;
+  background-color: #ddd;
+  display: flex;
+}
+#aboutus .aboutus-heading {
+  margin-right: 1rem;
+  margin-left: 2rem;
+}
+#aboutus .aboutus-content {
+  padding: 5rem;
+  box-sizing: border-box;
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#aboutus .aboutus-img {
+  flex: 1 1 50%;
+}
+#aboutus .heads {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#aboutus .heads .aboutus-heading {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#aboutus .underline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#aboutus .underline .small-underline {
+  width: 9rem;
+  height: 0.1rem;
+  background-color: #4b4b4b;
+}
+#aboutus .underline .big-underline {
+  width: 9rem;
+  height: 0.2rem;
+  background-color: #1f1812;
+}
+#aboutus .sub-heading {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  color: #4b4b4b;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+#aboutus .aboutus-para p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e1e1e;
+  font-style: italic;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 1.5rem 0;
+}
+#aboutus .aboutus-btn {
+  margin-top: 1.2rem;
+  width: 15rem;
+  padding: 0.7rem 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 0.1rem solid rgb(78, 78, 78);
+  box-shadow: #4b4b4b;
+  outline: none;
+  cursor: pointer;
+}
+#aboutus .btn-arrow {
+  margin-left: 0.5rem;
+  transition: margin-left 0.5s ease-in-out;
+}
+#aboutus .aboutus-btn:hover .btn-arrow {
+  margin-left: 1.5rem;
+}
+#aboutus .aboutus-img {
+  margin-top: 7.7rem;
+  position: relative;
+}
+#aboutus .aboutus-img .img {
+  width: 18rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4);
+}
+#aboutus .aboutus-img .img-1 {
+  transform: translate(-30%, -150%);
+}
+#aboutus .aboutus-img .img-2 {
+  transform: translate(-110%, -120%);
+}
+#aboutus .aboutus-img .img-3 {
+  transform: translate(-20%, -60%);
+}
+#aboutus .aboutus-img .img-4 {
+  transform: translate(-115%, -20%);
+}
+
+#room {
+  margin-left: 6rem;
+}
+#room .common-header {
+  padding: 3rem;
+  text-align: center;
+  color: #4b4b4b;
+}
+#room .common-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}
+#room span {
+  color: #1f1812;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#room .underline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#room .underline .small-underline {
+  width: 9rem;
+  height: 0.1rem;
+  background-color: #4b4b4b;
+}
+#room .underline .big-underline {
+  width: 9rem;
+  height: 0.2rem;
+  background-color: #1f1812;
 }/*# sourceMappingURL=style.css.map */
