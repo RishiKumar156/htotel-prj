@@ -89,6 +89,7 @@
   align-items: center;
   left: -14rem;
   position: fixed;
+  z-index: 5;
   width: 20rem;
   height: 100%;
   background: linear-gradient(90deg, rgba(118, 115, 113, 0.804), rgba(110, 75, 41, 0.792)), url("./nav-bk.webp") center no-repeat;
@@ -238,7 +239,7 @@
   margin-top: 0.3rem;
 }
 #header .banner {
-  margin: 5rem 0;
+  margin: 2rem 0 5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -252,8 +253,7 @@
   font-weight: 400;
   letter-spacing: 0.1rem;
   margin-bottom: 2rem;
-  animation: anima 5s ease-in;
-  animation-iteration-count: infinite;
+  animation: anima 2s ease-in;
 }
 #header .banner p {
   font-size: 0.8rem;
@@ -277,6 +277,9 @@
   padding: 0.8rem 1rem;
   font-family: "Montserrat", sans-serif;
 }
+#header .banner button a:hover {
+  color: white;
+}
 @keyframes anima {
   0% {
     opacity: 0;
@@ -288,7 +291,7 @@
 
 #aboutus {
   margin-left: 6rem;
-  height: 80vh;
+  height: auto;
   background-color: #ddd;
   display: flex;
 }
@@ -411,6 +414,7 @@
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 0.2rem;
+  margin-bottom: 2rem;
 }
 #room span {
   color: #1f1812;
@@ -434,4 +438,419 @@
   width: 9rem;
   height: 0.2rem;
   background-color: #1f1812;
+}
+#room .room-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#room .room-card-wrapper .room-card {
+  width: 30rem;
+  margin: 2.5rem;
+  background: #1f1812;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+}
+#room .room-card-wrapper .room-card img {
+  width: 100%;
+}
+#room .room-card-wrapper .room-card-content {
+  color: #e0dcdc;
+  padding: 2rem;
+}
+#room .room-card-wrapper .room-card-content .room-card-para,
+#room .room-card-wrapper .room-card-content .room-card-price,
+#room .room-card-wrapper .room-card-content .room-card-btn {
+  margin-left: 1rem;
+}
+#room .room-card-wrapper .book {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+#room .room-card-wrapper .book .room-card-price,
+#room .room-card-wrapper .book .room-card- {
+  margin-left: 1rem;
+}
+#room .room-card-wrapper .book .room-card-price {
+  font-size: 3rem;
+}
+#room .room-card-wrapper .room-card-heading {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 2rem;
+}
+#room .room-card-btn {
+  width: 15rem;
+  padding: 0.7rem 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  background: none;
+  color: #e0dcdc;
+  outline: none;
+  cursor: pointer;
+}
+#room .btn-arrow {
+  margin-left: 0.5rem;
+  transition: margin-left 0.5s ease-in-out;
+}
+#room .room-card-btn:hover .btn-arrow {
+  margin-left: 1.5rem;
+}
+
+#customer {
+  margin-left: 6rem;
+  background-color: #cdcdcd;
+}
+#customer .common-header {
+  padding-top: 4rem;
+}
+#customer .common-heading {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#customer h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+#customer span {
+  margin-left: 0.7rem;
+  color: #1f1812;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#customer .customer-para {
+  text-align: center;
+  color: #1f1812;
+  font-size: 0.9rem;
+  margin: 2rem 0 4rem 0;
+}
+#customer .underline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#customer .underline .small-underline {
+  width: 9rem;
+  height: 0.1rem;
+  background-color: #4b4b4b;
+}
+#customer .underline .big-underline {
+  width: 9rem;
+  height: 0.2rem;
+  background-color: #1f1812;
+}
+#customer .customer-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#customer .customer-card-wrapper .customer-card {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem !important;
+  background-color: #1f1812;
+  margin: 1rem;
+  color: #ddd;
+  box-shadow: 0 1rem 6rem rgba(0, 0, 0, 0.3);
+}
+#customer .customer-card-wrapper .customer-card img {
+  width: 100%;
+  height: 100%;
+}
+#customer .customer-card-wrapper .customer-card .cum-2 {
+  flex-direction: row-reverse !important;
+}
+#customer .customer-info {
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+#customer .customer-info .customer-fname {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+#customer .customer-info .customer-para-1 {
+  margin-bottom: 1rem;
+}
+#customer .customer-info .customer-para-2 {
+  font-size: 0.8rem;
+}
+
+#footer {
+  margin-left: 6rem;
+  color: #e0dcdc;
+  background-color: #1f1812;
+}
+#footer a {
+  text-decoration: none;
+  color: #e0dcdc;
+}
+#footer h1,
+#footer h3 {
+  font-size: 1.2rem !important;
+  font-weight: 300 !important;
+  margin-bottom: 1.5rem;
+  color: white !important;
+}
+#footer .main-footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+#footer .footer-heading {
+  font-size: 0.8rem;
+  color: #e0dcdc;
+}
+#footer .footer-list {
+  padding: 0.2rem 0;
+  text-align: center;
+}
+#footer p {
+  margin-bottom: 0.7rem;
+}
+#footer form {
+  display: flex;
+}
+#footer form .footer-input {
+  font-size: 1rem;
+  border: none;
+  color: #1f1812;
+  padding: 0.5rem;
+}
+#footer form .footer-btn {
+  background-color: #cdcdcd;
+  padding: 0.7rem;
+  border: none;
+  color: #1f1812;
+  font-weight: bolder;
+}
+#footer .gallery {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#footer .gal-img {
+  width: 6rem;
+}
+#footer .gal-img img {
+  width: 100%;
+  padding: 0.2rem;
+}
+#footer .gal-img .item-1 {
+  display: flex;
+  margin-right: 1rem;
+}
+#footer .gal-img-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+#footer .creater {
+  display: flex;
+  background-color: #1e1e1e;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer .creater p {
+  margin: 0;
+}
+#footer .creater div {
+  margin: 1rem 2rem;
+}
+#footer a:hover {
+  color: white;
+}
+
+@media (max-width: 1400px) {
+  #footer .main-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  #footer ul {
+    display: flex;
+    flex-direction: row !important;
+    margin-bottom: 1rem;
+  }
+  #footer ul li {
+    margin: 0 0.5rem;
+  }
+  .footer-form {
+    margin-bottom: 1rem;
+  }
+  #customer .customer-img-wrapper img {
+    padding: 0 !important;
+    height: 100%;
+  }
+  #customer .customer-info .customer-para-2 {
+    font-size: 0.8rem;
+    padding-right: 0.5rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 1200px) {
+  #customer .customer-img-wrapper img {
+    padding: 0 !important;
+    height: 100%;
+  }
+  #customer .customer-info .customer-para-2 {
+    font-size: 0.8rem;
+    padding-right: 0.5rem;
+    padding-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #customer .customer-para {
+    padding: 0 1rem !important;
+  }
+  #customer .customer-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #customer .customer-card-wrapper .customer-card {
+    display: flex;
+    flex-direction: column;
+  }
+  #customer .customer-card-wrapper .customer-card .cum-2 {
+    flex-direction: row;
+  }
+  #customer .customer-card-wrapper .customer-card .customer-para-2 {
+    padding-bottom: 3rem;
+  }
+  #customer .customer-card-wrapper img {
+    padding: 0 !important;
+  }
+}
+@media (max-width: 600px) {
+  #customer .customer-para {
+    padding: 0 1rem !important;
+  }
+  #footer .footer-list-wrapper ul {
+    flex-direction: column !important;
+    align-items: baseline;
+  }
+  #footer .footer-list-wrapper ul li {
+    margin-bottom: 0.2rem;
+    margin-left: 0.3rem;
+  }
+}
+@media (max-width: 1200px) {
+  #aboutus {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    height: 150vh;
+  }
+  #aboutus .underline {
+    width: 70%;
+  }
+  #aboutus .aboutus-heading {
+    font-size: 1.5rem !important;
+    margin: 0 0.2rem 0 0;
+  }
+  #aboutus .sub-heading {
+    padding-left: 0.5rem;
+    font-size: 0.8rem !important;
+    width: 10rem !important;
+  }
+  #aboutus p {
+    font-size: 0.8rem !important;
+  }
+  #aboutus .aboutus-img {
+    margin: 0;
+  }
+  #aboutus .aboutus-img img {
+    width: 12rem !important;
+  }
+}
+@media (max-width: 600px) {
+  #header,
+  #aboutus,
+  #room,
+  #customer,
+  #footer {
+    margin-left: 4rem;
+  }
+  #footer .copy-right,
+  #footer .text-right {
+    font-size: 0.7rem;
+  }
+  .navbar .sidebar {
+    width: 4rem;
+  }
+  .navigation {
+    left: -16rem;
+  }
+  #header .brand h1 {
+    font-size: 2rem !important;
+  }
+  #header .banner h1 {
+    font-size: 1.5rem;
+  }
+  #header .banner p {
+    font-size: 0.8rem !important;
+  }
+  #aboutus .aboutus-img {
+    margin-left: 4.5rem;
+  }
+  #room .common-header {
+    padding-bottom: 0;
+  }
+  #room .common-header .common-heading {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  #room .common-header span {
+    font-size: 1.5rem;
+  }
+  #room .room-card-wrapper .room-card {
+    width: 80%;
+  }
+  #room .room-card-content .room-card-heading {
+    font-size: 1.6rem;
+  }
+  #room .room-card-content .room-card-para {
+    font-size: 0.8rem;
+  }
+  #room .room-card-content .book .room-card-price {
+    font-size: 1.4rem;
+  }
+  #room .room-card-content .book .room-card-btn {
+    font-size: 0.7rem;
+  }
+  .sidebar .year p {
+    font-size: 0.6rem;
+  }
+  #aboutus .aboutus-img .img-1 {
+    transform: translate(-45%, -150%);
+  }
+  #aboutus .aboutus-img .img-2 {
+    transform: translate(-100%, -120%);
+  }
+  #aboutus .aboutus-img .img-3 {
+    transform: translate(-40%, -70%);
+  }
+  #aboutus .aboutus-img .img-4 {
+    transform: translate(-105%, -30%);
+  }
+  .navigation.active {
+    margin-left: -3rem;
+  }
+}
+@media (max-width: 400px) {
+  #room .room-card-content .book .room-card-price {
+    font-size: 1rem;
+  }
+  #room .room-card-content .book .room-card-btn {
+    font-size: 0.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
